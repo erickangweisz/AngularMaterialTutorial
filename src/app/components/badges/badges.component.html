@@ -1,0 +1,50 @@
+<h1>[ Badges ]</h1>
+
+<div>
+    <span matBadge="3">notifications</span>
+</div>
+
+<h3>positions:</h3>
+<div>
+    <span matBadge="3" matBadgePosition="below before">notifications</span>
+</div>
+<div>
+    <span matBadge="3" matBadgePosition="below after">notifications</span>
+</div>
+<div>
+    <span matBadge="3" matBadgePosition="above before">notifications</span>
+</div>
+
+<h3>sizes:</h3>
+<div>
+    <span matBadge="3" matBadgeSize="small">notifications</span>
+</div>
+<div>
+    <span matBadge="3" matBadgeSize="medium">notifications</span>
+</div>
+<div>
+    <span matBadge="3" matBadgeSize="large">notifications</span>
+</div>
+
+<h3>colors:</h3>
+<div>
+    <span matBadge="3" matBadgeColor="primary">notifications</span>
+</div>
+<div>
+    <span matBadge="3" matBadgeColor="accent">notifications</span>
+</div>
+<div>
+    <span matBadge="3" matBadgeColor="warn">notifications</span>
+</div>
+
+<h3>overlap:</h3>
+<div>
+    <span matBadge="3" matBadgeOverlap="false">notifications</span>
+</div>
+
+<h3>badge binding:</h3>
+<div>
+    <span [matBadge]="notifications" 
+        matBadgeOverlap="false"
+        [matBadgeHidden]="notifications === 0">notifications</span>
+</div>
