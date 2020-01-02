@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { sidenavReducer } from './store/sidenav/sidenav.reducer';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
@@ -14,6 +18,7 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    StoreModule.forRoot({ sidenav: sidenavReducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

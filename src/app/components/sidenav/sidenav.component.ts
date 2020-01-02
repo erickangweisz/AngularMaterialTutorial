@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.reducers';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.sass']
 })
-export class SidenavComponent {
-  opened: boolean
+export class SidenavComponent implements OnInit {
+  opened: boolean;
 
-  constructor() {
-    this.opened = false;
-  }
+  constructor(private store: Store<AppState>) {}
 
-  log(state) {
-    console.log(state)
+  ngOnInit(): void {
+    this.store.select('sidenav')
+      .subscribe(state => this.opened = state);
   }
 }
