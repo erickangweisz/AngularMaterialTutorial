@@ -22,6 +22,7 @@ import { environment } from 'src/environments/environment';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListComponent } from './components/list/list.component';
 import { GridListComponent } from './components/grid-list/grid-list.component';
+import { ExpansionPanelComponent } from './components/expansion-panel/expansion-panel.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GridListComponent } from './components/grid-list/grid-list.component';
     SidenavComponent,
     MenuComponent,
     ListComponent,
-    GridListComponent
+    GridListComponent,
+    ExpansionPanelComponent
   ],
   imports: [
     BrowserModule,
