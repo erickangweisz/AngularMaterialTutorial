@@ -1,0 +1,34 @@
+<h1>[ Menu ]</h1>
+
+<mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">frontend</button>
+    <button mat-menu-item>backend</button>
+</mat-menu>
+
+<button class="center" mat-flat-button [matMenuTriggerFor]="appMenu">menu</button>
+
+<mat-menu #subMenu="matMenu">
+    <button mat-menu-item>angular</button>
+    <button mat-menu-item>react</button>
+    <button mat-menu-item>vue</button>
+</mat-menu>
+
+<mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name" let-hobby="hobby">
+        <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Hobby is {{ hobby }}</button>
+        <button mat-menu-item>Log out {{ name }}</button>
+    </ng-template>
+</mat-menu>
+
+<button 
+    mat-raised-button 
+    [matMenuTriggerData]="{ name: 'Vishwas', hobby: 'football' }" 
+    [matMenuTriggerFor]="lazyMenu">Vishwas
+</button>
+
+<button 
+    mat-raised-button 
+    [matMenuTriggerData]="{ name: 'Codevolution', hobby: 'teaching' }" 
+    [matMenuTriggerFor]="lazyMenu">Codevolution
+</button>

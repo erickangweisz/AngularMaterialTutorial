@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 import { environment } from 'src/environments/environment';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { environment } from 'src/environments/environment';
     BadgesComponent,
     ProgressSpinnerComponent,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
