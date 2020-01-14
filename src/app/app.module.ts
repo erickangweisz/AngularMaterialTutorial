@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 
@@ -28,6 +28,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { InputsComponent } from './components/inputs/inputs.component';
 import { SelectComponent } from './components/select/select.component';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +49,14 @@ import { SelectComponent } from './components/select/select.component';
     TabsComponent,
     StepperComponent,
     InputsComponent,
-    SelectComponent
+    SelectComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     StoreModule.forRoot({ sidenav: sidenavReducer }),
     StoreDevtoolsModule.instrument({
