@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 
+import { environment } from 'src/environments/environment';
+
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { sidenavReducer } from './store/sidenav/sidenav.reducer';
@@ -17,8 +19,6 @@ import { BadgesComponent } from './components/badges/badges.component';
 import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-
-import { environment } from 'src/environments/environment';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListComponent } from './components/list/list.component';
 import { GridListComponent } from './components/grid-list/grid-list.component';
@@ -33,6 +33,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { RadioButtonComponent } from './components/radio-button/radio-button.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { SnackbarComponent,
+        CustomSnackbarComponent } from './components/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,12 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     CheckboxComponent,
     RadioButtonComponent,
     DatePickerComponent,
-    TooltipComponent
+    TooltipComponent,
+    SnackbarComponent,
+    CustomSnackbarComponent
+  ],
+  entryComponents: [ 
+    CustomSnackbarComponent 
   ],
   imports: [
     BrowserModule,
