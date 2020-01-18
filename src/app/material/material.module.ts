@@ -19,7 +19,9 @@ import { MatButtonModule,
         MatSelectModule, 
         MatAutocompleteModule,
         MatCheckboxModule, 
-        MatRadioModule } from '@angular/material';
+        MatRadioModule, 
+        MatDatepickerModule,
+        MatNativeDateModule } from '@angular/material';
 
 const material = [
   MatButtonModule,
@@ -42,7 +44,9 @@ const material = [
   MatSelectModule,
   MatAutocompleteModule,
   MatCheckboxModule,
-  MatRadioModule
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 ];
 
 @NgModule({
