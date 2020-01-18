@@ -35,6 +35,8 @@ import { DatePickerComponent } from './components/date-picker/date-picker.compon
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { SnackbarComponent,
         CustomSnackbarComponent } from './components/snackbar/snackbar.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 
 @NgModule({
   declarations: [
@@ -62,10 +64,13 @@ import { SnackbarComponent,
     DatePickerComponent,
     TooltipComponent,
     SnackbarComponent,
-    CustomSnackbarComponent
+    CustomSnackbarComponent,
+    DialogComponent,
+    DialogExampleComponent
   ],
   entryComponents: [ 
-    CustomSnackbarComponent 
+    CustomSnackbarComponent,
+    DialogExampleComponent
   ],
   imports: [
     BrowserModule,
