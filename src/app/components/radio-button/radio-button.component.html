@@ -1,0 +1,9 @@
+<h1>[ Radio-Button ]</h1>
+
+<mat-radio-group [(ngModel)]="selectedValue">
+    <mat-radio-button value="angular" color="primary">angular</mat-radio-button>
+    <mat-radio-button value="react">react</mat-radio-button>
+    <mat-radio-button value="vue" color="warn">vue</mat-radio-button>
+</mat-radio-group>
+
+<p>{{ selectedValue }}</p>
