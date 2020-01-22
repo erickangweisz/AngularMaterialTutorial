@@ -28,6 +28,7 @@ import { MatButtonModule,
         MatTableModule, 
         MatSortModule, 
         MatPaginatorModule } from '@angular/material';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 const material = [
   MatButtonModule,
@@ -58,7 +59,8 @@ const material = [
   MatDialogModule,
   MatTableModule,
   MatSortModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  ScrollingModule
 ];
 
 @NgModule({

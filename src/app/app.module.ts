@@ -38,6 +38,7 @@ import { SnackbarComponent,
 import { DialogComponent } from './components/dialog/dialog.component';
 import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 import { DatatableComponent } from './components/datatable/datatable.component';
+import { VirtualScrollingComponent } from './components/virtual-scrolling/virtual-scrolling.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { DatatableComponent } from './components/datatable/datatable.component';
     CustomSnackbarComponent,
     DialogComponent,
     DialogExampleComponent,
-    DatatableComponent
+    DatatableComponent,
+    VirtualScrollingComponent
   ],
   entryComponents: [ 
     CustomSnackbarComponent,
